@@ -15,20 +15,20 @@ Chapter attendance, absence approval, and member management are manually recorde
 ## Methodology & Project Scope
 ### The project will consist of three components and will be built using the following resources:
 1. Front-End (Client-side)
-  * React.js, HTML, and CSS
+   * React.js, HTML, and CSS
 2. Backend (Server-side)
-  * JavaScript (JS)
+   * JavaScript (JS)
 3. Database
-  * AWS or Firebase
+   * AWS or Firebase
 
 ## Goals & Features
 1. Differentiate members based on their status & easily able to change member status
-  * Actives / LOAs
-  * Suspended
-  * Alumni
+   * Actives / LOAs
+   * Suspended
+   * Alumni
 
 2. Keep track of member information on a table
- * Actives
-   - First & Last Name
-   - Role / committee
+  * Actives
+    - First & Last Name
+    - Role / committee
 
