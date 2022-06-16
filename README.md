@@ -31,4 +31,24 @@ Chapter attendance, absence approval, and member management are manually recorde
     * Actives
       - First & Last Name
       - Role / committee
+      - Pledge Class
+      - Email
+      - Year
+      - Grade
+      - Major
+      - Points?
+    * Alumni
+       - First & Last Name
+       - Preferred Name
+       - Birthday
+       - Major
+       - non-UW Email
+       - Phone Number
+       - Company working at
+       - Position
+       - Location
+3. Able to filter members based on the values mentioned in Goal #2
+4. Member search bar
+5. Email Response Tool - for the absence request
+  * ex. Send a premade email template with click of a button
 
