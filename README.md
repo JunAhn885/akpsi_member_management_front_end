@@ -28,7 +28,7 @@ Chapter attendance, absence approval, and member management are manually recorde
    * Alumni
 
 2. Keep track of member information on a table
-  * Actives
-    - First & Last Name
-    - Role / committee
+    * Actives
+      - First & Last Name
+      - Role / committee
 
