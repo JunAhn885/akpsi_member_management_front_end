@@ -15,6 +15,11 @@ function App() {
     axios.post('http://localhost:8080/addUser', { name: user });
   }
 
+  function deleteUserDb(event) {
+    const newUrl = `http://localhost:8080/deleteUser/${user}`;
+    axios.delete(newUrl);
+  }
+
   // HTTP protocal, this line of code is basically like Postman,
   // calling to the pp.get('/getUser') function in the backend
   useEffect(() => {
@@ -29,6 +34,7 @@ function App() {
     <div>
       <input type="text" onChange={updateUser} />
       <button onClick={updateUserDb}>add User</button>
+      <button onClick={deleteUserDb}>delete User</button>
       <p>{allUser}</p>
 
     </div>
