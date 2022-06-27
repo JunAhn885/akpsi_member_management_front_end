@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import axios from 'axios';
 
 const serverUrl = 'http://localhost:8080';

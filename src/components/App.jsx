@@ -1,5 +1,5 @@
 // keep the jsx files concise as possible (only inlcude code that interacts with the UI)
-
+/* eslint linebreak-style: ["error", "windows"] */
 import React, { useState, useEffect } from 'react';
 import UserService from '../services/userService';
 
