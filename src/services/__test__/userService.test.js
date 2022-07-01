@@ -1,12 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
-import React from 'react';
-import { render, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import Sinon from 'sinon';
 import axios from 'axios';
 import UserService from '../userService';
 
-jest.mock('axios');
+// jest.mock('axios');
 
 describe('User Service Tests', () => {
   // http request parameters
@@ -15,34 +12,20 @@ describe('User Service Tests', () => {
   const user = 'Jun';
 
   test('addUser Axios call', async () => {
-    const result = 200;
-    axios.post.mockResolvedValueOnce(result);
-
-    // when
-    const axiosCall = await UserService.addUser(user);
-
-    // then
-    expect(axios.post).toHaveBeenCalledWith(`${userEndpoint}/addUser`, { name: user });
-    expect(axiosCall).toEqual(result);
+    const sinonPost = Sinon.stub(axios, 'post').resolves();
+    UserService.addUser(user);
+    sinonPost.should.have.been.calledWith(`${userEndpoint}/addUser`, { name: user });
   });
 
   test('deleteUser Axios call', async () => {
-    const result = [];
-    axios.delete.mockResolvedValueOnce(result);
-
-    const axiosCall = await UserService.deleteUser(user);
-
-    expect(axios.delete).toHaveBeenCalledWith(`${userEndpoint}/deleteUser/${user}`);
-    expect(axiosCall).toEqual(result);
+    const sinonDelete = Sinon.stub(axios, 'delete').resolves();
+    UserService.deleteUser(user);
+    sinonDelete.should.have.been.calledWith(`${userEndpoint}/deleteUser/${user}`);
   });
 
   test('getUsers Axios call', async () => {
-    const result = ['Jun', 'Dan'];
-    axios.get.mockResolvedValueOnce(result);
-
-    const axiosCall = await UserService.getUsers();
-
-    expect(axios.get).toHaveBeenCalledWith(`${userEndpoint}/getUsers`);
-    expect(axiosCall).toEqual(result);
+    const sinonGet = Sinon.stub(axios, 'get').resolves();
+    UserService.getUsers();
+    sinonGet.should.have.been.calledWith(`${userEndpoint}/getUsers`);
   });
 });
